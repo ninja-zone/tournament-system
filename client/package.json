@@ -1,0 +1,20 @@
+{
+    "name": "tournament-system-client",
+    "description": "The system for handling tournaments in popular league system (groups, IKO, IIKO).",
+    "author": "tournament-system-client <tournament-system-client@gmail.com>",
+    "contributors": [
+    	{
+    		"name": "Konrad Kowalski",
+    		"email": "rootsher@gmail.com"
+    	},
+    	{
+    		"name": "Rafał Jankowski",
+    		"email": "rjankowskipl@gmail.com"
+    	}
+    ],
+    "dependencies": {
+        "express": "4.12.x"
+    },
+    "version": "0.1.0",
+    "main": "./app/index.html"
+}

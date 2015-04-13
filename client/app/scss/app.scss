@@ -1,0 +1,12 @@
+@import "compass/reset";
+
+@import "components/_main-menu.scss";
+@import "components/_window.scss";
+
+.mainContent {
+	width: 100%;
+	height: calc(100% - 25px);
+	background-color: #EFEFEF;
+	position: absolute;
+	top: 25px;
+}

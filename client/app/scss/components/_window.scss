@@ -1,0 +1,22 @@
+.window {
+	width: 300px;
+	height: 200px;
+	background-color: #F00;
+	position: absolute;
+	top: 0;
+	left: 0;
+	.handler {
+		background-color: #00F;
+		height: 20px;
+		cursor: pointer;
+	}
+	.rightDownResize {
+		width: 10px;
+		height: 10px;
+		background-color: #000;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		cursor: pointer;
+	}
+}
