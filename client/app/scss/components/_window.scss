@@ -1,0 +1,96 @@
+//NOTE: Config properties:
+$border-color: #4F2F4F; // #964B00
+$border-size: 2px;
+
+//NOTE: Default properties:
+$default-window-width: 500px;
+$default-view-height: 300px;
+
+section.main--content .window {
+    width: $default-window-width;
+    position: absolute;
+    background-color: #F00;
+    cursor: default;
+    .corners {
+        width: 100%;
+        height: 100%;
+        .corner {
+            position: absolute;
+            background-color: $border-color;
+            &.h { height: $border-size; }
+            &.v { width: $border-size; }
+            &.n, &.ne, &.nw { top: 0; }
+            &.s, &.se, &.sw { bottom: 0; }
+            &.w, &.nw, &.sw { left: 0; }
+            &.e, &.ne, &.se { right: 0; }
+        }
+        .corner.n {
+            right: $border-size;
+            left: $border-size;
+            cursor: n-resize;
+        }
+        .corner.s {
+            right: $border-size;
+            left: $border-size;
+            cursor: s-resize;
+        }
+        .corner.w {
+            top: $border-size;
+            bottom: $border-size;
+            cursor: w-resize;
+        }
+        .corner.e {
+            top: $border-size;
+            bottom: $border-size;
+            cursor: e-resize;
+        }
+        .corner.nw { cursor: nw-resize; }
+        .corner.ne { cursor: ne-resize; }
+        .corner.sw { cursor: sw-resize; }
+        .corner.se { cursor: se-resize; }
+    }
+    .view {
+        padding: $border-size;
+        .view--header {
+            overflow: hidden;
+            background-color: #6F4242; // #4F2F4F, #874300
+            color: #FFF;
+            cursor: move;
+            h1 {
+                float: left;
+                font-size: 12px;
+                padding: 5px;
+                padding-top: 7px;
+            }
+            .windowControl {
+                float: right;
+                .icon {
+                    float: left;
+                    margin: 3px;
+                    font-size: 12px;
+                    cursor: pointer;
+                    padding: 3px;
+                    border: 1px solid rgba(255, 255, 255, 0.8);
+                    color: rgba(255, 255, 255, 0.8);
+                }
+                .icon.contextMenu {
+                    ul {
+                        li {}
+                    }
+                }
+                .icon.close { margin-left: 0; }
+            }
+        }
+        .view--content {
+            height: $default-view-height;
+            background-color: #EFEFEF; // #f0eded
+            overflow-y: scroll;
+            p {
+                line-height: 14px;
+                font-size: 11px;
+                padding: 5px;
+                text-align: justify;
+            }
+        }
+    }
+}

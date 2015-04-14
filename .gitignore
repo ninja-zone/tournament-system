@@ -1,0 +1,13 @@
+client/node_modules/
+
+client/.sass-cache/
+
+client/app/fonts/*
+client/app/scss/vendor/*
+client/app/img/*
+client/app/css/*
+
+!client/app/fonts/.gitkeep
+!client/app/scss/vendor/.gitkeep
+!client/app/img/.gitkeep
+!client/app/css/.gitkeep

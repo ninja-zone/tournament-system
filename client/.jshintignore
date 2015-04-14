@@ -1,0 +1,7 @@
+node_modules/
+
+.sass-cache/
+
+client/app/fonts/
+client/app/scss/vendor/
+client/app/img/
