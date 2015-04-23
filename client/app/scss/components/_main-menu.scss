@@ -1,6 +1,202 @@
+$break-tablet: 1024px;
+$column-height: 25px;
+
 main section.main--menu {
 	width: 100%;
 	height: 25px;
 	background-color: #CCC;
 	position: absolute;
+	nav {
+	    ul {
+	        margin: 0;
+	        padding: 0;
+	        list-style: none;
+	    }
+	    ul.menu {
+	        li {
+	            float: left;
+	            font-size: 14px;
+	            @media screen and (max-width: $break-tablet) {
+	                position: relative;
+	            }
+	            span {
+	                &:after {
+	                    content: "\00BB";
+	                    font-size: 20px;
+	                    line-height: 0;
+	                    top: 22px;
+	                    right: 20px;
+	                }
+	                &.mobileArrow {
+	                    display: none;
+	                    position: absolute;
+	                    width: 57px;
+	                    height: 44px;
+	                    top: 0;
+	                    right: 0;
+	                    margin-right: 0;
+	                    border-left: 1px solid #dbdbdb;
+	                    text-align: center;
+	                    z-index: 99;
+	                    cursor: pointer;
+	                    &.steps {
+	                        border-left: 0;                            
+	                        i {
+	                            color: #fff;
+	                        }
+	                    }
+	                    &.active {
+	                        i {
+	                            transform:rotate(180deg);
+	                            -webkit-transform:rotate(180deg); 
+	                            -moz-transform:rotate(180deg);
+	                            -o-transform:rotate(180deg);
+	                        }                        
+	                    }
+	                    @media screen and (max-width: $break-tablet) {
+	                        display: block;
+	                    }
+	                    &:after {
+	                        content: ""
+	                    }
+	                    &:before {
+	                        content: '';
+	                        display: inline-block;
+	                        height: 100%;
+	                        vertical-align: middle;
+	                        margin-right: 0;
+	                    }
+	                    i {
+	                        font-size: 20px;
+	                        color: #000;
+	                        display: inline-block;
+	                        vertical-align: middle
+	                    }
+	                }
+	            }
+	            &:hover {
+	                background-color: #4d4d4d;
+	                text-decoration: none;
+	                @media screen and (max-width: $break-tablet) {
+	                    background: #ffffff; /* Old browsers */
+	                    background: -moz-linear-gradient(top,  #ffffff 0%, #f2f2f2 100%); /* FF3.6+ */
+	                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f2f2f2)); /* Chrome,Safari4+ */
+	                    background: -webkit-linear-gradient(top,  #ffffff 0%,#f2f2f2 100%); /* Chrome10+,Safari5.1+ */
+	                    background: -o-linear-gradient(top,  #ffffff 0%,#f2f2f2 100%); /* Opera 11.10+ */
+	                    background: -ms-linear-gradient(top,  #ffffff 0%,#f2f2f2 100%); /* IE10+ */
+	                    background: linear-gradient(to bottom,  #ffffff 0%,#f2f2f2 100%); /* W3C */
+	                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 ); /* IE6-9 */
+	                }
+	            }
+	            &:hover > ul { 
+	                display: block;
+	                @media screen and (max-width: $break-tablet) {
+	                    display: none;
+	                }
+	            }
+	            &:hover > a {
+	                color: #fff;
+	                @media screen and (max-width: $break-tablet) {
+	                    color: #333;
+	                }
+	            }
+	            a {
+	                line-height: $column-height;
+	                padding: 0 20px;
+	                display: block;
+	                text-decoration: none;
+	                color: #333;
+	                white-space: nowrap;
+	                text-align: center;
+	                @media screen and (max-width: $break-tablet) {
+	                    text-align: left;
+	                }
+	                &:hover {
+	                    color: #fff;
+	                    @media screen and (max-width: $break-tablet) {
+	                        color: #333;
+	                    }
+	                }
+	            }
+	        }
+	        ul {
+	            width: 236px;
+	            position: absolute;
+	            display: none;
+	            z-index: 100;
+	            ul {
+	                margin-left: 100%;
+	                margin-top: -($column-height);
+	                @media screen and (max-width: $break-tablet) {
+		                margin-left: 0;
+		                margin-top: 0;
+	                }
+	            }
+	            li {
+	                background-color: #4d4d4d;
+	                position: relative;
+	                float: none;
+	                &:hover {
+	                    background-color: #4d4d4d;
+	                    color: #fff;
+	                    text-decoration: none;
+	                }
+	                & > a:after { 
+	                    content: "\00BB";
+	                    font-size: 16px;
+	                    line-height: 0;
+	                    position: absolute;
+	                    top: 14px;
+	                    right: 20px;
+	                    @media screen and (max-width: $break-tablet) {
+	                        content: "";
+	                    }
+	                }
+	                & > a:only-child:after { content: ""; }
+	                a {
+	                    color: #fff;
+	                    text-align: left;
+	                }
+	                ul {
+	                    li {
+	                        &:hover {
+	                            a {
+	                                @media screen and (max-width: $break-tablet) {
+	                                    background: transparent !important;
+	                                }
+	                            }
+	                        }
+	                        a {
+	                            @media screen and (max-width: $break-tablet) {
+	                                margin: 0 15px;
+	                                background: transparent ;
+	                            }
+	                        }
+	                        ul {
+	                            li {
+	                                &:hover {
+	                                    a {
+	                                        @media screen and (max-width: $break-tablet) {
+	                                            background: transparent;
+	                                        }
+	                                    }
+	                                }
+	                                a {
+	                                    @media screen and (max-width: $break-tablet) {
+	                                        margin: 0 25px;
+	                                    }
+	                                }
+	                            }
+	                        }
+	                    }
+	                }
+	            }
+	            ul ul {
+	                // height: ($column-height * $break-after);
+	                // @include columns(3);
+	                // @include column-gap(0);
+	            }
+	        }
+	    }
+	}
 }
